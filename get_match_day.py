@@ -14,7 +14,7 @@ for x in range(1000):
     r = requests.get(url = URL, stream=True)
 
     if r.status_code == 200:
-        print('done')
+        print("done")
         with open('{}/img.png'.format(CURRENT_PATH), 'wb') as f:
             for chunk in r:
                 f.write(chunk)
